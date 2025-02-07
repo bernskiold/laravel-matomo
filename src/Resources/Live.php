@@ -19,7 +19,7 @@ class Live extends BaseResource
         ]);
     }
 
-    public function lastVisits(int $amount = null): object|array
+    public function lastVisits(?int $amount = null): object|array
     {
         $query = [];
 

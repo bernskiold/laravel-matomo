@@ -12,7 +12,7 @@ class Goals extends BaseResource
         SelectsPeriod,
         SelectsSites;
 
-    public function summary(int $goalId = null): object|array
+    public function summary(?int $goalId = null): object|array
     {
         $query = [];
 

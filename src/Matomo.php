@@ -28,8 +28,7 @@ class Matomo
 
     public function __construct(
         public MatomoClient $client
-    ) {
-    }
+    ) {}
 
     public function actions(): Actions
     {

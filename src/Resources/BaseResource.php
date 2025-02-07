@@ -19,8 +19,7 @@ abstract class BaseResource
 
     public function __construct(
         public MatomoClient $client
-    ) {
-    }
+    ) {}
 
     public function get(string $functionName, array $params = []): object|array
     {

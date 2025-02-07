@@ -15,8 +15,7 @@ class MatomoClient
     public function __construct(
         private string $apiKey,
         private string $baseUrl
-    ) {
-    }
+    ) {}
 
     public function baseUrl(string $url): self
     {
