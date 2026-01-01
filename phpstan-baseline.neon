@@ -1,16 +1,43 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			message: '#^Called ''env'' outside of the config directory which returns null when the config is cached, use ''config''\.$#'
+			identifier: larastan.noEnvCallsOutsideOfConfig
+			count: 2
+			path: config/matomo.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
 			count: 2
 			path: src/Exceptions/InvalidConfiguration.php
 
 		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
 			count: 1
 			path: src/Exceptions/MatomoException.php
 
 		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
 			count: 1
 			path: src/MatomoClient.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(BernskioldMedia\\LaravelMatomo\\Resources\\BaseResource\) and ''amount'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Resources/BaseResource.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(BernskioldMedia\\LaravelMatomo\\Resources\\BaseResource\) and ''sortColumn'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Resources/BaseResource.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(BernskioldMedia\\LaravelMatomo\\Resources\\BaseResource\) and ''sortOrder'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Resources/BaseResource.php
