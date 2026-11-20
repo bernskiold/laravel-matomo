@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-matomo` will be documented in this file.
 
+## 0.3.1 - 2026-11-20
+
+### What's Changed
+
+* Add PHP 8.5 and 8.6 support and drop Laravel 11 by @ErikBernskiold in https://github.com/bernskiold/laravel-matomo/pull/31
+* Support PHP 8.6 as a stable, required CI target by @ErikBernskiold in https://github.com/bernskiold/laravel-matomo/pull/32
+
+**Full Changelog**: https://github.com/bernskiold/laravel-matomo/compare/0.3.0...0.3.1
+
 ## 0.3.0 - 2026-04-25
 
 ### What's Changed
